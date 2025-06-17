@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reinux - Potencia tu Talento en la Era Digital</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Poppins e Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Configuración personalizada para Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'petroleo': '#007C80',
+                        'gris-oscuro': '#1F2E35',
+                        'gris-azulado': '#6CA6B2',
+                        'gris-claro': '#F1F3F4',
+                        'celeste-pastel': '#8EE3FD'
+                    },
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif'],
+                        'inter': ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Estilo base para transiciones suaves */
+        .faq-answer {
+            transition: max-height 0.5s ease-in-out, opacity 0.3s ease-in-out;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+        }
+        .faq-answer.open {
+            max-height: 300px; /* Ajusta según el contenido */
+            opacity: 1;
+        }
+        .faq-arrow {
+            transition: transform 0.3s ease-in-out;
+        }
+        .faq-arrow.rotated {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="bg-white font-inter text-gris-oscuro antialiased">
+
+    <!-- 1. Encabezado -->
+    <header id="inicio" class="bg-gris-claro">
+        <div class="container mx-auto px-6 py-8 md:py-16 text-center">
+            <!-- Placeholder para el Logo -->
+            <div class="inline-block bg-white px-8 py-4 mb-8 rounded-lg shadow-sm">
+                <span class="font-bold text-2xl text-gris-oscuro font-poppins">Reinux</span>
+            </div>
+            
+            <h1 class="text-4xl md:text-6xl font-poppins font-bold text-gris-oscuro leading-tight mb-4">
+                Dale un giro digital a tu talento. <br class="hidden md:block"> Sin complicaciones.
+            </h1>
+            <p class="text-lg md:text-xl text-gris-azulado max-w-3xl mx-auto mb-8">
+                Nuestro curso te lleva de la mano para que aproveches la tecnología a tu favor, con herramientas gratuitas y fáciles de usar.
+            </p>
+            <a href="#precio" class="bg-petroleo text-white font-bold font-poppins py-4 px-10 rounded-full inline-block shadow-lg hover:bg-opacity-90 transform hover:-translate-y-1 transition-all duration-300">
+                Quiero inscribirme ahora
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- 2. Sección de Identificación -->
+        <section id="para-ti" class="py-16 md:py-24">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-poppins font-bold mb-4">¿Este curso es para ti?</h2>
+                <p class="text-lg text-gris-azulado max-w-2xl mx-auto mb-12">Si respondes "sí" a alguna de estas preguntas, estás en el lugar correcto.</p>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Pregunta 1 -->
+                    <div class="bg-white p-8 rounded-xl shadow-md border border-gray-200">
+                        <div class="text-4xl text-petroleo mb-4">💡</div>
+                        <h3 class="font-poppins font-semibold text-xl mb-2">¿Sientes que la tecnología avanza muy rápido?</h3>
+                        <p class="text-gris-azulado">Te ayudamos a ponerte al día y a ganar confianza en el entorno digital actual.</p>
+                    </div>
+                    <!-- Pregunta 2 -->
+                    <div class="bg-white p-8 rounded-xl shadow-md border border-gray-200">
+                        <div class="text-4xl text-petroleo mb-4">🚀</div>
+                        <h3 class="font-poppins font-semibold text-xl mb-2">¿Quieres digitalizar tu negocio o proyecto?</h3>
+                        <p class="text-gris-azulado">Aprende a usar herramientas gratuitas para optimizar tu trabajo sin gastar una fortuna.</p>
+                    </div>
+                    <!-- Pregunta 3 -->
+                    <div class="bg-white p-8 rounded-xl shadow-md border border-gray-200">
+                        <div class="text-4xl text-petroleo mb-4">📈</div>
+                        <h3 class="font-poppins font-semibold text-xl mb-2">¿Buscas ser más productivo y eficiente?</h3>
+                        <p class="text-gris-azulado">Descubre cómo la IA y la automatización pueden hacer las tareas repetitivas por ti.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Beneficios -->
+        <section id="beneficios" class="bg-gris-claro py-16 md:py-24">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-poppins font-bold mb-4">Lo que aprenderás a hacer</h2>
+                    <p class="text-lg text-gris-azulado max-w-2xl mx-auto">Te enfocarás en habilidades prácticas que puedes aplicar de inmediato.</p>
+                </div>
+                <div class="max-w-3xl mx-auto">
+                    <ul class="space-y-4">
+                        <li class="flex items-start bg-white p-6 rounded-lg shadow-sm">
+                            <svg class="w-6 h-6 text-petroleo mr-4 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <div>
+                                <h4 class="font-bold text-lg">Crear formularios profesionales</h4>
+                                <p class="text-gris-azulado">Para registrar clientes, hacer encuestas o recopilar cualquier tipo de información de forma automática.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start bg-white p-6 rounded-lg shadow-sm">
+                            <svg class="w-6 h-6 text-petroleo mr-4 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <div>
+                                <h4 class="font-bold text-lg">Organizar datos como un experto</h4>
+                                <p class="text-gris-azulado">Usa hojas de cálculo (Google Sheets) para administrar finanzas, inventarios o listas de contactos sin esfuerzo.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start bg-white p-6 rounded-lg shadow-sm">
+                            <svg class="w-6 h-6 text-petroleo mr-4 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <div>
+                                <h4 class="font-bold text-lg">Presentar informes de impacto</h4>
+                                <p class="text-gris-azulado">Transforma datos aburridos en gráficos y paneles visuales (Looker Studio) que todos entiendan.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start bg-white p-6 rounded-lg shadow-sm">
+                            <svg class="w-6 h-6 text-petroleo mr-4 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <div>
+                                <h4 class="font-bold text-lg">Automatizar tareas con Inteligencia Artificial</h4>
+                                <p class="text-gris-azulado">Aprende a usar la IA para redactar correos, generar ideas y optimizar tu tiempo de forma sorprendente.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Contenido del curso -->
+        <section id="contenido" class="py-16 md:py-24">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-poppins font-bold mb-4">Un camino claro, semana a semana</h2>
+                    <p class="text-lg text-gris-azulado max-w-2xl mx-auto">Este es el plan de 8 semanas que te convertirá en un experto digital.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Semana 1-8 -->
+                    <div class="border border-gray-200 p-6 rounded-lg">
+                        <p class="font-bold text-petroleo mb-2">Semana 1</p>
+                        <h4 class="font-poppins font-semibold text-lg">Tu Ecosistema Digital con Google</h4>
+                    </div>
+                    <div class="border border-gray-200 p-6 rounded-lg">
+                        <p class="font-bold text-petroleo mb-2">Semana 2</p>
+                        <h4 class="font-poppins font-semibold text-lg">Google Forms: Recopila Información sin Límites</h4>
+                    </div>
+                    <div class="border border-gray-200 p-6 rounded-lg">
+                        <p class="font-bold text-petroleo mb-2">Semana 3</p>
+                        <h4 class="font-poppins font-semibold text-lg">Google Sheets Básico: Organiza tu Mundo</h4>
+                    </div>
+                    <div class="border border-gray-200 p-6 rounded-lg">
+                        <p class="font-bold text-petroleo mb-2">Semana 4</p>
+                        <h4 class="font-poppins font-semibold text-lg">Google Sheets Avanzado: Fórmulas que Trabajan para Ti</h4>
+                    </div>
+                    <div class="border border-gray-200 p-6 rounded-lg">
+                        <p class="font-bold text-petroleo mb-2">Semana 5</p>
+                        <h4 class="font-poppins font-semibold text-lg">Looker Studio: Crea Dashboards Impactantes</h4>
+                    </div>
+                    <div class="border border-gray-200 p-6 rounded-lg">
+                        <p class="font-bold text-petroleo mb-2">Semana 6</p>
+                        <h4 class="font-poppins font-semibold text-lg">Canva: Diseño Gráfico Fácil para No Diseñadores</h4>
+                    </div>
+                     <div class="border border-gray-200 p-6 rounded-lg">
+                        <p class="font-bold text-petroleo mb-2">Semana 7</p>
+                        <h4 class="font-poppins font-semibold text-lg">Introducción a la IA: Tu Asistente Personal</h4>
+                    </div>
+                    <div class="border border-gray-200 p-6 rounded-lg bg-celeste-pastel text-gris-oscuro">
+                        <p class="font-bold text-petroleo mb-2">Semana 8</p>
+                        <h4 class="font-poppins font-semibold text-lg">Proyecto Final: Integrando tus Nuevas Habilidades</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Testimonios -->
+        <section id="testimonios" class="bg-gris-claro py-16 md:py-24">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-poppins font-bold mb-4">No tienes que creernos a nosotros</h2>
+                    <p class="text-lg text-gris-azulado max-w-2xl mx-auto">Mira lo que dicen nuestros alumnos.</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <!-- Testimonio 1 (Placeholder) -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                        <p class="text-gris-azulado mb-4">"Este curso me quitó el miedo a la tecnología. Ahora administro mi pequeño negocio de forma mucho más eficiente y profesional. ¡Totalmente recomendado!"</p>
+                        <p class="font-bold font-poppins">- Ana G., 52 años, Emprendedora</p>
+                    </div>
+                    <!-- Testimonio 2 (Placeholder) -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                        <p class="text-gris-azulado mb-4">"Pensé que ya sabía usar estas herramientas, pero el curso me enseñó trucos de automatización que me ahorran horas de trabajo a la semana. Increíble."</p>
+                        <p class="font-bold font-poppins">- Carlos M., 31 años, Administrador</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Precio e Inscripción -->
+        <section id="precio" class="py-16 md:py-24">
+            <div class="container mx-auto px-6">
+                <div class="max-w-2xl mx-auto bg-white rounded-2xl shadow-2xl p-8 md:p-12 text-center border border-petroleo">
+                    <h2 class="text-3xl md:text-4xl font-poppins font-bold mb-2">Acceso completo al curso</h2>
+                    <p class="text-lg text-gris-azulado mb-6">Un solo pago para transformar tus habilidades para siempre.</p>
+                    <div class="text-5xl md:text-6xl font-poppins font-bold text-petroleo mb-6">
+                        $299 <span class="text-2xl text-gris-azulado">USD</span>
+                    </div>
+                    <ul class="text-left max-w-sm mx-auto space-y-2 mb-8 text-gris-azulado">
+                        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> Acceso de por vida</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> 8 módulos de contenido</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> Certificado de finalización</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> Acceso a comunidad privada</li>
+                    </ul>
+                    <a href="#" class="bg-petroleo text-white font-bold font-poppins py-4 px-10 rounded-full inline-block shadow-lg w-full hover:bg-opacity-90 transform hover:-translate-y-1 transition-all duration-300">
+                        Inscribirme y Empezar a Aprender
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Preguntas Frecuentes (FAQ) -->
+        <section id="faq" class="bg-gris-claro py-16 md:py-24">
+            <div class="container mx-auto px-6 max-w-3xl">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-poppins font-bold mb-4">¿Tienes dudas?</h2>
+                    <p class="text-lg text-gris-azulado">Aquí resolvemos las más comunes.</p>
+                </div>
+                <div class="space-y-4">
+                    <!-- Pregunta 1 -->
+                    <div class="bg-white rounded-lg shadow-sm">
+                        <button class="faq-question w-full flex justify-between items-center text-left p-6 font-semibold text-lg">
+                            <span>¿Necesito tener experiencia previa?</span>
+                            <svg class="faq-arrow w-6 h-6 text-petroleo flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="faq-answer px-6 pb-6 text-gris-azulado">
+                            <p>No, en absoluto. El curso está diseñado desde cero, pensando en personas que tienen conocimientos básicos o nulos. Te guiaremos paso a paso.</p>
+                        </div>
+                    </div>
+                    <!-- Pregunta 2 -->
+                    <div class="bg-white rounded-lg shadow-sm">
+                        <button class="faq-question w-full flex justify-between items-center text-left p-6 font-semibold text-lg">
+                            <span>¿Las herramientas que se usan son de pago?</span>
+                            <svg class="faq-arrow w-6 h-6 text-petroleo flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="faq-answer px-6 pb-6 text-gris-azulado">
+                            <p>No. Nos enfocamos exclusivamente en herramientas poderosas y gratuitas como las de Google (Forms, Sheets, Looker Studio), Canva y versiones de IA de libre acceso. No tendrás que gastar nada extra.</p>
+                        </div>
+                    </div>
+                    <!-- Pregunta 3 -->
+                    <div class="bg-white rounded-lg shadow-sm">
+                        <button class="faq-question w-full flex justify-between items-center text-left p-6 font-semibold text-lg">
+                            <span>¿Cuánto tiempo tengo para completar el curso?</span>
+                            <svg class="faq-arrow w-6 h-6 text-petroleo flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="faq-answer px-6 pb-6 text-gris-azulado">
+                            <p>El acceso es de por vida. Aunque el contenido está estructurado en 8 semanas, puedes tomarte todo el tiempo que necesites y volver a consultar las lecciones cuando quieras.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. Formulario de Contacto -->
+        <section id="contacto" class="py-16 md:py-24">
+            <div class="container mx-auto px-6 max-w-2xl">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-poppins font-bold mb-4">¿Algo más en qué podamos ayudarte?</h2>
+                    <p class="text-lg text-gris-azulado">Envíanos un mensaje y te responderemos lo
